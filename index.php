@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Personal Christmas Cards - PersonalChristmasCards.com</title>
+	<title>Personal Christmas Cards - LonghandCards.com</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -47,7 +47,7 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">PersonalChristmasCards.com</h1>
+			<h1 class="remove-bottom" style="margin-top: 40px">LonghandCards.com</h1>
 			<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
 			<hr />
 		</div>
