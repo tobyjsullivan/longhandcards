@@ -53,45 +53,19 @@ require_once('Order.php');
 		<?php require_once('header.php'); ?>
 
 		<?php
-		$order = new Order();
-		$order->setMessage($_POST['message']);
-		$order->setWriter($_POST['writer']);
-		$order->setSenderName($_POST['sender-name']);
-		$order->setSenderEmail($_POST['sender-email']);
-		$order->setRecipientName($_POST['recipient-name']);
-		$order->setRecipientAddress($_POST['recipient-address']);
-		$order->setRecipientAddress2($_POST['recipient-address2']);
-		$order->setRecipientCity($_POST['recipient-city']);
-		$order->setRecipientPostal($_POST['recipient-postal']);
-		$order->setRecipientProvince($_POST['recipient-province']);
-		$order->setRecipientCountry($_POST['recipient-country']);
 
-		$token  = $_POST['stripeToken'];
-		$charge = Stripe_Charge::create(array(
-			'card'     => $token,
-			'amount'   => 1000,
-			'currency' => 'usd'
-		));
-
-		$order->setStripePayment($charge["id"]);
-
-		$order->save();
-
-		$order_id = "LHC050-".$order->getOrderId();
-		$order_token = urlencode(base64_encode($order_id));
+		$order_id = base64_decode(urldecode($_GET['order_token']));
 		?>
 
 		<div class="two-thirds column">
-			<h3>Your order is being processed...</h3>
-			<p>Please wait while we process you order.</p>
-			<p><img src="images/loading.gif" /></p>
-			<p><strong>Do NOT refresh or click the back-button on your browser.</strong></p>
+			<h3>Thank you for your order!</h3>
+			<p>Your order number is <strong><?= $order_id ?></strong>. Please keep 
+				this for your records.</p>
+			<p>We've received your order and will write your card soon. We'll send you an email letting 
+				you know when it has been dropped in the mail.</p>
+			<p>If you have any questions or concerns about your order, please get in touch at 
+				<a href="mailto:contact@longhandcards.com">contact@longhandcards.com</a></p>
 		</div>
-		<script type="text/javascript">
-		<!--
-		window.location = "thankyou.php?order_token=<?= $order_token ?>";
-		//-->
-		</script>
 
 		<?php require_once('footer.php'); ?>
 		

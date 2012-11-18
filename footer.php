@@ -5,3 +5,10 @@
 	<p><strong>Step Three:</strong> Pay</p>
 	<p><strong>Then:</strong> We handwrite your card and mail it in time for Christmas!</p>
 </div>
+
+<div class="row">
+	<div class="sixteen columns">
+		<hr />
+		<p>&copy; Copyright 2012 LonghandCards.com</p>
+	</div>
+</div>
