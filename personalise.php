@@ -61,10 +61,11 @@ require_once('Database.php');
 				<input type="hidden" name="card" value="<?= $_GET['card'] ?>" id="card" />
 				<label for="message">Write a message</label>
 				<textarea name="message" id="message">Dear friend,
-May you have a very merry Christmas!
 
-Love,
-John</textarea>
+May you have a very merry Christmas!</textarea>
+				<?php
+				/*
+				?>
 				<fieldset>
 					<label for="">Choose a writer</label>
 					<?php
@@ -84,6 +85,13 @@ John</textarea>
 					$db->close();
 					?>
 				</fieldset>
+				<?php
+				*/
+				// Writer selection temporarily disabled
+				?>
+				<input type="hidden" id="writer" name="writer" value="02" />
+				<?php
+				?>
 
 				<fieldset>
 					<label for="">Recipient (Who is the card for?)</label>
