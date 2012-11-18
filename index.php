@@ -61,7 +61,9 @@ require_once('Database.php');
 			<div class="row card-listing">
 				<div class="four columns alpha card-preview">
 					<p>
-						<img src="<?= "images/card".$card_row['id']."_front_200.jpg" ?>">
+						<a href="<?= "images/card".$card_row['id']."_front_full.jpg" ?>">
+							<img src="<?= "images/card".$card_row['id']."_front_200.jpg" ?>">
+						</a>
 					</p>
 					<p><?= $card_row['display_name'] ?></p>
 				</div>
