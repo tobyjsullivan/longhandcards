@@ -86,6 +86,7 @@ require_once('Order.php');
 			<p>Please wait while we process you order.</p>
 			<p><img src="images/loading.gif" /></p>
 			<p><strong>Do NOT refresh or click the back-button on your browser.</strong></p>
+			<p>If you are not redirected automatically after five seconds, <a href="thankyou.php?order_token=<?= $order_token ?>">click here</a>.</p>
 		</div>
 		<script type="text/javascript">
 		<!--
