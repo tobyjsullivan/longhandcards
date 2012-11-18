@@ -53,65 +53,10 @@
 		</div>
 
 		<div class="two-thirds column">
-			<h3>Step Two: Personalise Your Card</h3>
-			<p>
-				<img src="images/placeholder_card_message.png" />
-			</p>
-			<form method="post" action="process.php">
-				<label for="message">Write a message</label>
-				<textarea name="message" id="message">Dear friend,
-May you have a very merry Christmas!
-
-Love,
-John</textarea>
-				<fieldset>
-					<label for="">Choose a writer</label>
-					<label for="writer-toby"><input type="radio" id="writer-toby" name="writer" value="toby" checked="checked" />Toby</label>
-					<label for="writer-hailey"><input type="radio" id="writer-hailey" name="writer" value="hailey" />Hailey</label>
-				</fieldset>
-
-				<fieldset>
-					<label for="">Recipient (Who is the card for?)</label>
-					
-					<label for="recipient-name">Name</label>
-					<input type="text" id="recipient-name" name="recipient-name" />
-					
-					<label for="recipient-address">Address</label>
-					<input type="text" id="recipient-address" name="recipient-address" />
-					
-					<label for="recipient-address2">Address (Line 2)</label>
-					<input type="text" id="recipient-address2" name="recipient-address2" />
-					
-					<label for="recipient-city">City</label>
-					<input type="text" id="recipient-city" name="recipient-city" />
-					
-					<label for="recipient-province">State/Province</label>
-					<input type="text" id="recipient-province" name="recipient-province" />
-
-					<label for="recipient-country">Country</label>
-					<select id="recipient-country" name="recipient-country">
-						<option value="canada">Canada</option>
-						<option value="united-states" selected="selected">United States</option>
-					</select>
-				</fieldset>
-
-				<fieldset>
-					<label for="">Your information</label>
-					<label for="sender-name">Full Name</label>
-					<input type="text" id="sender-name" name="sender-name" />
-					<label for="sender-email">Email</label>
-					<input type="email" id="sender-email" name="sender-email" />
-				</fieldset>
-				
-				<h3>Step Three: Pay</h3>
-				<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
-				data-key="pk_test_TsKKWJQMzpvKFjvVrTxbnSy6"
-				data-amount="1000"
-				data-label="Pay Now"
-				></script>
-			</form>
+			<h3>Thank you for your order!</h3>
+			<p>We've received your order and will write your card soon. We'll send you an email letting 
+				you know when it has been dropped in the mail.</p>
 		</div>
-
 		<div class="one-third column">
 			<h3>How It Works</h3>
 			<p><strong>Step One:</strong> Choose a Card</p>
