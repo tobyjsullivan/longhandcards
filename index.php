@@ -67,7 +67,7 @@ require_once('Database.php');
 				</div>
 				<div class="four columns omega">
 					<div class="card-options">
-						<p>See Inside</p>
+						<p><a href="<?= "images/card".$card_row['id']."_inside_500.jpg" ?>">See Inside</a></p>
 						<p><a href="<?= "personalise.php?card=".$card_row['id'] ?>">Choose This Card</a></p>
 					</div>
 				</div>

@@ -54,6 +54,7 @@ require_once('Order.php');
 
 		<?php
 		$order = new Order();
+		$order->setCard($_POST['card']);
 		$order->setMessage($_POST['message']);
 		$order->setWriter($_POST['writer']);
 		$order->setSenderName($_POST['sender-name']);

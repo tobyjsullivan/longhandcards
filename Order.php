@@ -2,6 +2,7 @@
 require_once('Database.php');
 
 class Order {
+	private $card;
 	private $message;
 	private $writer;
 	private $sender_name;
@@ -24,6 +25,17 @@ class Order {
 		$this->stripe_payment = $this->db->escape_string($stripe_payment);
 	}
 
+	public function setCard($card) {
+		$this->ensureUpdatable();
+
+		// TODO Verify card id is valid
+		if($card <= 0) {
+			throw new Exception("Invalid Card Number");
+		}
+
+		$this->card = $this->db->escape_string($card);
+	}
+
 	public function setMessage($message) {
 		$this->ensureUpdatable();
 		
@@ -36,6 +48,9 @@ class Order {
 		$this->ensureUpdatable();
 		
 		// TODO Confirm writer is valid
+		if($writer <= 0) {
+			throw new Exception("Invalid Writer ID");
+		}
 
 		$this->writer = $this->db->escape_string($writer);
 	}
@@ -105,6 +120,7 @@ class Order {
 				`stripe_payment`,
 				`sender_name`,
 				`sender_email`,
+				`card`,
 				`message`,
 				`writer`,
 				`recipient_name`,
@@ -120,6 +136,7 @@ class Order {
 				'{$this->stripe_payment}',
 				'{$this->sender_name}',
 				'{$this->sender_email}',
+				'{$this->card}',
 				'{$this->message}',
 				'{$this->writer}',
 				'{$this->recipient_name}',

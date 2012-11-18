@@ -55,9 +55,10 @@ require_once('Database.php');
 		<div class="two-thirds column">
 			<h3>Step Two: Personalise Your Card</h3>
 			<p>
-				<img src="images/placeholder_card_message.png" />
+				<img src="images/card<?= $_GET['card'] ?>_inside_280.jpg" />
 			</p>
 			<form method="post" action="process.php">
+				<input type="hidden" name="card" value="<?= $_GET['card'] ?>" id="card" />
 				<label for="message">Write a message</label>
 				<textarea name="message" id="message">Dear friend,
 May you have a very merry Christmas!

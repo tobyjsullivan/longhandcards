@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2012 at 06:29 PM
+-- Generation Time: Nov 17, 2012 at 09:13 PM
 -- Server version: 5.5.28
 -- PHP Version: 5.3.10-1ubuntu3.4
 
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `stripe_payment` varchar(18) NOT NULL,
   `sender_name` varchar(255) NOT NULL,
   `sender_email` varchar(255) NOT NULL,
+  `card` int(3) unsigned zerofill NOT NULL,
   `message` text NOT NULL,
   `writer` int(2) unsigned zerofill NOT NULL,
   `recipient_name` varchar(255) NOT NULL,
