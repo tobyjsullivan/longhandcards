@@ -1,3 +1,6 @@
+<?php
+require_once('mysql_connect.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -45,46 +48,39 @@
 	<!-- Delete everything in this .container and get started on your own site! -->
 
 	<div class="container">
-
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">LonghandCards.com</h1>
-			<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
-			<hr />
-		</div>
+		<?php require_once('header.php'); ?>
 
 		<div class="two-thirds column">
 			<h3>Step One: Choose a Card</h3>
 			<?php
-			for($i = 0; $i < 3 ; $i++) {
+			$card_res = $db->query("SELECT id, display_name FROM cards ORDER BY id ASC");
+
+			while($card_row = $card_res->fetch_assoc()) {
 			?>
 			<div class="row card-listing">
-				<div class="four columns alpha">
-					<p class="card-preview">
+				<div class="four columns alpha card-preview">
+					<p>
 						<img src="images/placeholder_card.png">
 					</p>
+					<p><?= $card_row['display_name'] ?></p>
 				</div>
 				<div class="four columns omega">
 					<div class="card-options">
 						<p>See Inside</p>
-						<p><a href="personalise.php?card=0001">Choose This Card</a></p>
+						<p><a href="<?= "personalise.php?card=".$card_row['id'] ?>">Choose This Card</a></p>
 					</div>
 				</div>
 				<div class="two columns">
 					<p class="card-price">$10</p>
 				</div>
 			</div>
+			<hr />
 			<?php
 			}
 			?>
 		</div>
 
-		<div class="one-third column">
-			<h3>How It Works</h3>
-			<p><strong>Step One:</strong> Choose a Card</p>
-			<p><strong>Step Two:</strong> Personalise Your Card</p>
-			<p><strong>Step Three:</strong> Pay</p>
-			<p><strong>Then:</strong> We handwrite your card and mail it in time for Christmas!</p>
-		</div>
+		<?php require_once('footer.php'); ?>
 		
 	</div><!-- container -->
 

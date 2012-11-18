@@ -2,13 +2,13 @@ div.card-listing {
 	/* background-color: #fffcfc; */
 }
 
-p.card-preview {
+div.card-preview p {
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
 
-p.card-preview img {
+div.card-preview p img {
 	max-width: 200px;
 	max-height: 200px;
 	margin: 0;

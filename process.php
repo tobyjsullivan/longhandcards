@@ -48,12 +48,8 @@ require_once('stripe_config.php');
 	<!-- Delete everything in this .container and get started on your own site! -->
 
 	<div class="container">
-
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Longhand Cards</h1>
-			<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
-			<hr />
-		</div>
+		
+		<?php require_once('header.php'); ?>
 
 		<?php
 		$token  = $_POST['stripeToken'];
@@ -69,13 +65,8 @@ require_once('stripe_config.php');
 			<p>We've received your order and will write your card soon. We'll send you an email letting 
 				you know when it has been dropped in the mail.</p>
 		</div>
-		<div class="one-third column">
-			<h3>How It Works</h3>
-			<p><strong>Step One:</strong> Choose a Card</p>
-			<p><strong>Step Two:</strong> Personalise Your Card</p>
-			<p><strong>Step Three:</strong> Pay</p>
-			<p><strong>Then:</strong> We handwrite your card and mail it in time for Christmas!</p>
-		</div>
+
+		<?php require_once('footer.php'); ?>
 		
 	</div><!-- container -->
 

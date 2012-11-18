@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2012 at 06:05 PM
+-- Generation Time: Nov 17, 2012 at 06:29 PM
 -- Server version: 5.5.28
 -- PHP Version: 5.3.10-1ubuntu3.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `greetings`
@@ -58,6 +52,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `recipient_address` varchar(255) NOT NULL,
   `recipient_address2` varchar(255) NOT NULL,
   `recipient_city` varchar(255) NOT NULL,
+  `recipient_postal` varchar(20) NOT NULL,
   `recipient_province` varchar(255) NOT NULL,
   `recipient_country` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
@@ -85,7 +80,3 @@ CREATE TABLE IF NOT EXISTS `writers` (
 INSERT INTO `writers` (`id`, `name`, `display_name`) VALUES
 (01, 'toby', 'Toby'),
 (02, 'hailey', 'Hailey');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

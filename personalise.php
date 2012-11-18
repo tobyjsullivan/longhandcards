@@ -49,11 +49,7 @@ require_once('stripe_config.php');
 
 	<div class="container">
 
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Longhand Cards</h1>
-			<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
-			<hr />
-		</div>
+		<?php require_once('header.php'); ?>
 
 		<div class="two-thirds column">
 			<h3>Step Two: Personalise Your Card</h3>
@@ -88,6 +84,9 @@ John</textarea>
 					<label for="recipient-city">City</label>
 					<input type="text" id="recipient-city" name="recipient-city" />
 					
+					<label for="recipient-postal">Postal/Zip Code</label>
+					<input type="text" id="recipient-postal" name="recipient-postal" />
+					
 					<label for="recipient-province">State/Province</label>
 					<input type="text" id="recipient-province" name="recipient-province" />
 
@@ -115,13 +114,7 @@ John</textarea>
 			</form>
 		</div>
 
-		<div class="one-third column">
-			<h3>How It Works</h3>
-			<p><strong>Step One:</strong> Choose a Card</p>
-			<p><strong>Step Two:</strong> Personalise Your Card</p>
-			<p><strong>Step Three:</strong> Pay</p>
-			<p><strong>Then:</strong> We handwrite your card and mail it in time for Christmas!</p>
-		</div>
+		<?php require_once('footer.php'); ?>
 		
 	</div><!-- container -->
 
