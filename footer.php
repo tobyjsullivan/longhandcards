@@ -4,6 +4,8 @@
 	<p><strong>Step Two:</strong> Personalise Your Card</p>
 	<p><strong>Step Three:</strong> Pay</p>
 	<p><strong>Then:</strong> We handwrite your card and mail it in time for Christmas!</p>
+	<hr />
+	<p><small>Note: All prices listed and charged are in Canadian Dollars.</small></p>
 </div>
 
 <div class="row">
