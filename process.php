@@ -71,7 +71,7 @@ require_once('Order.php');
 		$charge = Stripe_Charge::create(array(
 			'card'     => $token,
 			'amount'   => 1000,
-			'currency' => 'usd'
+			'currency' => 'cad'
 		));
 
 		$order->setStripePayment($charge["id"]);
