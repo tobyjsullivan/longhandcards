@@ -1,5 +1,6 @@
 <?php 
 require_once('stripe_config.php');
+require_once('Database.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -65,8 +66,22 @@ Love,
 John</textarea>
 				<fieldset>
 					<label for="">Choose a writer</label>
-					<label for="writer-toby"><input type="radio" id="writer-toby" name="writer" value="toby" checked="checked" />Toby</label>
-					<label for="writer-hailey"><input type="radio" id="writer-hailey" name="writer" value="hailey" />Hailey</label>
+					<?php
+					$db = new Database();
+					$writer_res = $db->query("SELECT id, name, display_name FROM writers ORDER BY id ASC");
+
+					$checked = "checked=\"checked\"";
+					while($writer_row = $writer_res->fetch_assoc()) {
+						?>
+						<label for="writer-<?= $writer_row['name'] ?>"><input type="radio" id="writer-<?= $writer_row['name'] ?>" name="writer" value="<?= $writer_row['id'] ?>" <?= $checked ?> /><?= $writer_row['display_name'] ?></label>
+						<?php 
+						if($checked != "") {
+							$checked = "";
+						}
+					}
+
+					$db->close();
+					?>
 				</fieldset>
 
 				<fieldset>
@@ -121,5 +136,6 @@ John</textarea>
 
 <!-- End Document
 ================================================== -->
+<?php require_once('olark.php'); ?>
 </body>
 </html>

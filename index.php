@@ -80,6 +80,7 @@ require_once('Database.php');
 			}
 			$db->close();
 			?>
+			<p>We are always adding more cards so check back again soon!</p>
 		</div>
 
 		<?php require_once('footer.php'); ?>
@@ -89,5 +90,6 @@ require_once('Database.php');
 
 <!-- End Document
 ================================================== -->
+<?php require_once('olark.php'); ?>
 </body>
 </html>
