@@ -1,5 +1,5 @@
 <?php
-require_once('mysql_connect.php');
+require_once('Database.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -53,6 +53,7 @@ require_once('mysql_connect.php');
 		<div class="two-thirds column">
 			<h3>Step One: Choose a Card</h3>
 			<?php
+			$db = new Database();
 			$card_res = $db->query("SELECT id, display_name FROM cards ORDER BY id ASC");
 
 			while($card_row = $card_res->fetch_assoc()) {
@@ -77,6 +78,7 @@ require_once('mysql_connect.php');
 			<hr />
 			<?php
 			}
+			$db->close();
 			?>
 		</div>
 

@@ -1,5 +1,6 @@
 <?php 
 require_once('stripe_config.php');
+require_once('Order.php');
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -48,22 +49,45 @@ require_once('stripe_config.php');
 	<!-- Delete everything in this .container and get started on your own site! -->
 
 	<div class="container">
-		
+
 		<?php require_once('header.php'); ?>
 
 		<?php
+		$order = new Order();
+		$order->setMessage($_POST['message']);
+		$order->setWriter($_POST['writer']);
+		$order->setSenderName($_POST['sender-name']);
+		$order->setSenderEmail($_POST['sender-email']);
+		$order->setRecipientName($_POST['recipient-name']);
+		$order->setRecipientAddress($_POST['recipient-address']);
+		$order->setRecipientAddress2($_POST['recipient-address2']);
+		$order->setRecipientCity($_POST['recipient-city']);
+		$order->setRecipientPostal($_POST['recipient-postal']);
+		$order->setRecipientProvince($_POST['recipient-province']);
+		$order->setRecipientCountry($_POST['recipient-country']);
+
 		$token  = $_POST['stripeToken'];
 		$charge = Stripe_Charge::create(array(
 			'card'     => $token,
 			'amount'   => 1000,
 			'currency' => 'usd'
 		));
+
+		$order->setStripePayment($charge["id"]);
+
+		$order->save();
+
+		$order_id = "LHC050-".$order->getOrderId();
 		?>
 
 		<div class="two-thirds column">
 			<h3>Thank you for your order!</h3>
+			<p>Your order number is <strong><?= $order_id ?></strong>. Please keep 
+				this for your records.</p>
 			<p>We've received your order and will write your card soon. We'll send you an email letting 
 				you know when it has been dropped in the mail.</p>
+			<p>If you have any questions or concerns about your order, please get in touch at 
+				<a href="mailto:contact@longhandcards.com">contact@longhandcards.com</a></p>
 		</div>
 
 		<?php require_once('footer.php'); ?>
