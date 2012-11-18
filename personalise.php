@@ -1,3 +1,6 @@
+<?php 
+require_once('stripe_config.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -105,7 +108,7 @@ John</textarea>
 				
 				<h3>Step Three: Pay</h3>
 				<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
-				data-key="pk_test_TsKKWJQMzpvKFjvVrTxbnSy6"
+				data-key="<?= $stripe['publishable_key'] ?>"
 				data-amount="1000"
 				data-label="Pay Now"
 				></script>

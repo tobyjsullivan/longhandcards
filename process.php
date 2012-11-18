@@ -1,3 +1,6 @@
+<?php 
+require_once('stripe_config.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -51,6 +54,15 @@
 			<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
 			<hr />
 		</div>
+
+		<?php
+		$token  = $_POST['stripeToken'];
+		$charge = Stripe_Charge::create(array(
+			'card'     => $token,
+			'amount'   => 1000,
+			'currency' => 'usd'
+		));
+		?>
 
 		<div class="two-thirds column">
 			<h3>Thank you for your order!</h3>
