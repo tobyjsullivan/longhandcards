@@ -20,9 +20,26 @@ if($debug == 0) {
 }
 ?>
 
-<div class="sixteen columns">
+<div class="two-thirds column">
 	<h1 class="remove-bottom" style="margin-top: 40px">Personal Christmas Cards</h1>
 	<p><em>Presented by LonghandCards.com</em></p>
 	<h5>It's like having your secretary send a card &mdash; but more personal.</h5>
 	<hr />
+</div>
+
+<div class="one-third column">
+  <div class="christmas-countdown">
+    <?php
+    $deadline = 1354492800; // Dec. 3rd, 2012
+    $rem = $deadline - time();
+
+    if($rem > 0) {
+      $days = floor($rem / (60 * 60 * 24));
+
+      ?>
+      <p>Only <?= $days ?> days left to mail your cards in time for Christmas!</p>
+      <?php
+    }
+    ?>
+  </div>
 </div>

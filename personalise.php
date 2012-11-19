@@ -25,6 +25,7 @@ require_once('Database.php');
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/greetings.css">
 	<link rel="stylesheet" href="stylesheets/greeting-personalise.css">
 
 	<!--[if lt IE 9]>
