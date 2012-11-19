@@ -39,6 +39,8 @@ if($debug == 0) {
       ?>
       <p>Only <?= $days ?> days left to mail your cards in time for Christmas!</p>
       <?php
+    } else {
+      die("Personal Christmas Cards is closed. The deadline for mailing cards has passed.");
     }
     ?>
   </div>
