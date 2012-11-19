@@ -73,7 +73,7 @@ require_once('Database.php');
 						<?php
 						if($card_row['stock'] > 0) {
 						?>
-						<p><a href="<?= "personalise.php?card=".$card_row['id'] ?>">Choose This Card</a></p>
+						<p class="buy-this-card"><a href="<?= "personalise.php?card=".$card_row['id'] ?>">Buy This Card</a></p>
 						<?php
 						} else {
 							?>
