@@ -2,3 +2,7 @@ textarea#message {
 	height: 150px;
 	width: 300px;
 }
+
+img.inside-preview {
+	border: 1px solid #ccc;
+}

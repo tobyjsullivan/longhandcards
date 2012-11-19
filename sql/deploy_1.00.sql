@@ -81,3 +81,20 @@ CREATE TABLE IF NOT EXISTS `writers` (
 INSERT INTO `writers` (`id`, `name`, `display_name`) VALUES
 (01, 'toby', 'Toby'),
 (02, 'hailey', 'Hailey');
+
+--
+-- Table structure for table `applied_updates`
+--
+
+CREATE TABLE IF NOT EXISTS `applied_updates` (
+  `id` int(6) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `version` varchar(18) NOT NULL,
+  `applied` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `applied_updates`
+--
+
+INSERT INTO `applied_updates` (`id`, `version`, `applied`) VALUES ('', '1.00', NOW());

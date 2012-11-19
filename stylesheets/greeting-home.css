@@ -23,6 +23,12 @@ div.card-options p {
 	margin-top: 40px;
 }
 
+p.out-of-stock {
+	color: #f00;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 p.card-price {
 	font-size: 48px;
 	margin-top: 50px;

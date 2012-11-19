@@ -54,7 +54,7 @@ require_once('Database.php');
 			<h3>Step One: Choose a Card</h3>
 			<?php
 			$db = new Database();
-			$card_res = $db->query("SELECT id, display_name FROM cards ORDER BY id ASC");
+			$card_res = $db->query("SELECT id, display_name, stock FROM cards ORDER BY RAND()");
 
 			while($card_row = $card_res->fetch_assoc()) {
 			?>
@@ -70,7 +70,17 @@ require_once('Database.php');
 				<div class="four columns omega">
 					<div class="card-options">
 						<p><a href="<?= "images/card".$card_row['id']."_inside_500.jpg" ?>">See Inside</a></p>
+						<?php
+						if($card_row['stock'] > 0) {
+						?>
 						<p><a href="<?= "personalise.php?card=".$card_row['id'] ?>">Choose This Card</a></p>
+						<?php
+						} else {
+							?>
+							<p class="out-of-stock">Out of Stock</p>
+							<?php
+						}
+						?>
 					</div>
 				</div>
 				<div class="two columns">

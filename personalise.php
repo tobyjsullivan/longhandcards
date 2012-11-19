@@ -55,7 +55,7 @@ require_once('Database.php');
 		<div class="two-thirds column">
 			<h3>Step Two: Personalise Your Card</h3>
 			<p>
-				<img src="images/card<?= $_GET['card'] ?>_inside_280.jpg" />
+				<img class="inside-preview" src="images/card<?= $_GET['card'] ?>_inside_280.jpg" />
 			</p>
 			<form method="post" action="process.php">
 				<input type="hidden" name="card" value="<?= $_GET['card'] ?>" id="card" />
@@ -108,12 +108,12 @@ May you have a very merry Christmas!</textarea>
 					<label for="recipient-city">City</label>
 					<input type="text" id="recipient-city" name="recipient-city" />
 					
-					<label for="recipient-postal">Postal/Zip Code</label>
-					<input type="text" id="recipient-postal" name="recipient-postal" />
-					
 					<label for="recipient-province">State/Province</label>
 					<input type="text" id="recipient-province" name="recipient-province" />
 
+					<label for="recipient-postal">Postal/Zip Code</label>
+					<input type="text" id="recipient-postal" name="recipient-postal" />
+					
 					<label for="recipient-country">Country</label>
 					<select id="recipient-country" name="recipient-country">
 						<option value="canada">Canada</option>
