@@ -5,4 +5,5 @@ textarea#message {
 
 img.inside-preview {
 	border: 1px solid #ccc;
+	cursor: url(images/zoom_32x32.png), auto;
 }

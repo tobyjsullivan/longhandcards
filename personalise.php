@@ -55,7 +55,9 @@ require_once('Database.php');
 		<div class="two-thirds column">
 			<h3>Step Two: Personalise Your Card</h3>
 			<p>
-				<img class="inside-preview" src="images/card<?= $_GET['card'] ?>_inside_280.jpg" />
+				<a href="images/card<?= $_GET['card'] ?>_inside_500.jpg">
+					<img class="inside-preview" src="images/card<?= $_GET['card'] ?>_inside_280.jpg" />
+				</a>
 			</p>
 			<form method="post" action="process.php">
 				<input type="hidden" name="card" value="<?= $_GET['card'] ?>" id="card" />
