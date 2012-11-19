@@ -74,7 +74,7 @@ require_once('Database.php');
 					</div>
 				</div>
 				<div class="two columns">
-					<p class="card-price">$10</p>
+					<p class="card-price">$5</p>
 				</div>
 			</div>
 			<hr />

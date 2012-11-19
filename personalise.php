@@ -132,7 +132,7 @@ May you have a very merry Christmas!</textarea>
 				<h3>Step Three: Pay</h3>
 				<script src="https://button.stripe.com/v1/button.js" class="stripe-button"
 				data-key="<?= $stripe['publishable_key'] ?>"
-				data-amount="1000"
+				data-amount="500"
 				data-label="Pay Now"
 				></script>
 			</form>

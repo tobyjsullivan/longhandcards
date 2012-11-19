@@ -70,7 +70,7 @@ require_once('Order.php');
 		$token  = $_POST['stripeToken'];
 		$charge = Stripe_Charge::create(array(
 			'card'     => $token,
-			'amount'   => 1000,
+			'amount'   => 500,
 			'currency' => 'cad'
 		));
 
